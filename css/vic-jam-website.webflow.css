@@ -205,7 +205,7 @@
 .image-3 {
   flex: 0 auto;
   width: 337px;
-  margin-right: 94px;
+  margin-right: 0;
   padding-right: 0;
 }
 
@@ -216,6 +216,7 @@
   overflow-wrap: anywhere;
   width: auto;
   margin-right: 35px;
+  padding-left: 36px;
   font-weight: 400;
   display: flex;
   position: static;
@@ -266,6 +267,10 @@
 }
 
 @media screen and (max-width: 991px) {
+  .section {
+    height: 1688px;
+  }
+
   .navbar {
     position: relative;
   }
@@ -340,6 +345,21 @@
     display: flex;
     position: static;
   }
+
+  .div-block-5 {
+    height: 312px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .section {
+    height: 1808px;
+  }
+
+  .div-block-5 {
+    width: 405px;
+    margin-bottom: 40px;
+  }
 }
 
 @media screen and (max-width: 479px) {
@@ -355,8 +375,8 @@
 
   .heading {
     margin-top: 0;
-    font-size: 25px;
-    line-height: 30px;
+    font-size: 35px;
+    line-height: 37px;
   }
 
   .button-2 {
@@ -389,6 +409,7 @@
     grid-row-gap: 0px;
     justify-content: center;
     align-items: center;
+    height: 112px;
     display: flex;
   }
 }
