@@ -447,6 +447,10 @@
     width: 100%;
   }
 
+  .image-2 {
+    width: 30%;
+  }
+
   .container-4 {
     grid-column-gap: 43px;
     grid-row-gap: 43px;
@@ -462,6 +466,18 @@
   .button-2 {
     background-color: var(--vic-blue);
     color: #fff;
+  }
+
+  .paragraph.header-text {
+    flex: 0 auto;
+    order: 0;
+    align-self: auto;
+    display: none;
+  }
+
+  .div-block-3.w--current {
+    justify-content: flex-start;
+    align-items: center;
   }
 
   .image-3 {
