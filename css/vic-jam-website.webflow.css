@@ -62,7 +62,7 @@
   background-image: url('../images/mountainsnobg.svg'), linear-gradient(180deg, var(--gradient-blue), var(--gradient-mid) 51%, var(--gradient-yellow));
   background-position: 50% 100%, 0 0;
   background-repeat: no-repeat, repeat;
-  background-size: auto, auto;
+  background-size: cover, auto;
   flex-flow: column;
   width: 100%;
   max-width: 100%;
@@ -147,8 +147,8 @@
 }
 
 .container-4 {
-  grid-column-gap: 55px;
-  grid-row-gap: 55px;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
   background-image: linear-gradient(#fff 47%, #fff0);
   border-radius: 100px;
   flex-flow: column;
@@ -167,7 +167,7 @@
   overflow-wrap: normal;
   justify-content: center;
   align-items: center;
-  margin-bottom: 85px;
+  margin-bottom: 47px;
   font-family: Lato, sans-serif;
   font-size: 80px;
   font-weight: 700;
@@ -441,6 +441,10 @@
 @media screen and (max-width: 479px) {
   .section {
     height: 1046px;
+  }
+
+  .container-2 {
+    width: 100%;
   }
 
   .container-4 {
