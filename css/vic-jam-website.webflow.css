@@ -78,6 +78,7 @@
 
 .navbar {
   background-color: var(--vic-blue);
+  position: fixed;
 }
 
 .brand {
@@ -85,11 +86,18 @@
 }
 
 .container-3 {
+  box-sizing: border-box;
   aspect-ratio: auto;
+  background-color: var(--vic-blue);
+  text-align: center;
+  object-fit: fill;
   flex-flow: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
   min-width: 100%;
   display: flex;
-  position: static;
+  position: fixed;
 }
 
 .image-2 {
@@ -115,7 +123,15 @@
   display: flex;
 }
 
-.nav-link, .nav-link-2, .nav-link-3 {
+.nav-link {
+  color: #fff;
+}
+
+.nav-link.w--current {
+  position: relative;
+}
+
+.nav-link-2, .nav-link-3 {
   color: #fff;
 }
 
@@ -129,8 +145,8 @@
   align-items: center;
   min-width: 80%;
   max-width: 80%;
-  margin-top: 89px;
-  padding: 98px;
+  margin-top: 114px;
+  padding: 32px 98px 98px;
   display: flex;
 }
 
@@ -140,6 +156,7 @@
   overflow-wrap: normal;
   justify-content: center;
   align-items: center;
+  margin-bottom: 85px;
   font-family: Lato, sans-serif;
   font-size: 80px;
   font-weight: 700;
@@ -157,9 +174,14 @@
 .button-2 {
   border: 2px solid var(--vic-blue);
   color: var(--vic-blue);
+  text-align: center;
   background-color: #3898ec00;
   border-radius: 20px;
-  font-size: 20px;
+  padding: 19px;
+  font-family: Lato, sans-serif;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 38px;
   transition: color .4s cubic-bezier(0, .549, .25, 1), background-color .4s cubic-bezier(0, .473, .25, 1);
 }
 
@@ -170,6 +192,7 @@
 
 .paragraph {
   color: #fff;
+  font-size: 25px;
 }
 
 .div-block-3 {
@@ -180,6 +203,7 @@
 }
 
 .image-3 {
+  flex: 0 auto;
   width: 337px;
   margin-right: 94px;
   padding-right: 0;
@@ -190,6 +214,7 @@
   white-space: normal;
   word-break: normal;
   overflow-wrap: anywhere;
+  width: auto;
   margin-right: 35px;
   font-weight: 400;
   display: flex;
@@ -197,6 +222,7 @@
 }
 
 .paragraph-2 {
+  width: 50%;
   font-family: Lato, sans-serif;
   font-size: 28px;
   line-height: 34px;
@@ -219,9 +245,151 @@
   line-height: 91px;
 }
 
-@media screen and (max-width: 479px) {
+.header-nav-link {
+  color: #fff;
+  font-family: Lato, sans-serif;
+  font-size: 20px;
+}
+
+.header-nav-link.header-button {
+  color: var(--vic-blue);
+  -webkit-text-stroke-color: #3c4596;
+  background-color: #fff;
+  border-radius: 13px;
+  font-weight: 700;
+}
+
+.flex-block {
+  justify-content: center;
+  align-self: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 991px) {
+  .navbar {
+    position: relative;
+  }
+
+  .container-4 {
+    flex: 0 auto;
+    align-self: auto;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
   .heading {
-    font-size: 80px;
+    margin-bottom: -5px;
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  .image-3 {
+    box-sizing: border-box;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    aspect-ratio: auto;
+    text-align: center;
+    overflow-wrap: normal;
+    object-fit: fill;
+    flex-flow: row;
+    flex: 1;
+    justify-content: center;
+    align-self: center;
+    align-items: center;
+    width: 80%;
+    height: 100%;
+    padding-right: 0;
+    display: inline-flex;
+    overflow: clip;
+  }
+
+  .paragraph-2 {
+    text-align: center;
+    width: 100%;
+  }
+
+  .section-2 {
+    height: 758px;
+  }
+
+  .flex-block {
+    aspect-ratio: auto;
+    text-align: center;
+    object-fit: fill;
+    flex-flow: column;
+    flex: 0 auto;
+    order: 0;
+    justify-content: flex-start;
+    align-self: center;
+    align-items: center;
+    position: static;
+    overflow: visible;
+  }
+
+  .icon {
+    color: #fff;
+  }
+
+  .div-block-4 {
+    flex-flow: row;
+    justify-content: center;
+    align-self: center;
+    align-items: center;
+    width: 100%;
+    height: 55.987%;
+    display: flex;
+    position: static;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .section {
+    height: 798px;
+  }
+
+  .container-4 {
+    grid-column-gap: 43px;
+    grid-row-gap: 43px;
+    border-radius: 20px;
+  }
+
+  .heading {
+    margin-top: 0;
+    font-size: 25px;
+    line-height: 30px;
+  }
+
+  .button-2 {
+    background-color: var(--vic-blue);
+    color: #fff;
+  }
+
+  .image-3 {
+    flex-flow: row;
+    margin-right: 0;
+  }
+
+  .bold-text {
+    font-size: 15px;
+    line-height: 18px;
+    position: static;
+  }
+
+  .heading-2 {
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  .div-block-4 {
+    display: flex;
+  }
+
+  .div-block-5 {
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
   }
 }
 
