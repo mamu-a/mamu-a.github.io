@@ -327,6 +327,11 @@
   display: flex;
 }
 
+.section-3 {
+  flex-flow: column;
+  display: flex;
+}
+
 @media screen and (max-width: 991px) {
   .section {
     height: 1366px;
