@@ -18,6 +18,12 @@
   display: flex;
 }
 
+.w-layout-vflex {
+  flex-direction: column;
+  align-items: flex-start;
+  display: flex;
+}
+
 @media screen and (max-width: 991px) {
   .w-layout-blockcontainer {
     max-width: 728px;
@@ -53,8 +59,15 @@
 }
 
 .section {
-  background-image: linear-gradient(180deg, var(--gradient-blue), var(--gradient-mid) 51%, var(--gradient-yellow));
+  background-image: url('../images/mountainsnobg.svg'), linear-gradient(180deg, var(--gradient-blue), var(--gradient-mid) 51%, var(--gradient-yellow));
+  background-position: 50% 100%, 0 0;
+  background-repeat: no-repeat, repeat;
+  background-size: auto, auto;
+  flex-flow: column;
+  width: 100%;
+  max-width: 100%;
   height: 1310px;
+  display: flex;
 }
 
 .body {
@@ -63,12 +76,10 @@
 
 .container-2 {
   mix-blend-mode: normal;
-  background-image: url('../images/mountainsnobg.svg');
-  background-position: 50% 100%;
-  background-size: cover;
   border-radius: 0;
   justify-content: center;
   align-items: stretch;
+  width: 1440px;
   max-width: 100%;
   min-height: 100%;
   max-height: 100%;
@@ -138,7 +149,7 @@
 .container-4 {
   grid-column-gap: 55px;
   grid-row-gap: 55px;
-  background-image: linear-gradient(#fff, #fff0);
+  background-image: linear-gradient(#fff 47%, #fff0);
   border-radius: 100px;
   flex-flow: column;
   justify-content: flex-start;
@@ -230,11 +241,12 @@
 }
 
 .section-2 {
-  background-image: url('../images/white-cutoff-website.svg'), linear-gradient(180deg, #343081, var(--vic-blue));
-  background-position: 50% 100%, 0 0;
-  background-repeat: no-repeat, repeat;
-  background-size: auto, auto;
-  height: 996px;
+  background-image: linear-gradient(180deg, #343081, var(--vic-blue));
+  flex-flow: column;
+  width: 100%;
+  max-width: 100%;
+  height: 1160px;
+  display: flex;
 }
 
 .heading-2 {
@@ -266,9 +278,58 @@
   align-items: center;
 }
 
+.container-5 {
+  flex-flow: column;
+  display: flex;
+}
+
+.flex-block-2 {
+  grid-column-gap: 33px;
+  grid-row-gap: 33px;
+  margin-top: 103px;
+}
+
+.button-3 {
+  color: var(--vic-blue);
+  -webkit-text-stroke-color: #fff;
+  background-color: #fff;
+  align-self: center;
+  font-family: Lato, sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 45px;
+}
+
+.link {
+  color: #b9d6ff;
+  flex-flow: row;
+  justify-content: center;
+  align-self: center;
+  align-items: center;
+  font-family: Lato, sans-serif;
+  font-size: 24px;
+  display: flex;
+}
+
+.div-block-6 {
+  aspect-ratio: auto;
+  text-align: center;
+  background-image: url('../images/white-cutoff-website.svg');
+  background-position: 50% 100%;
+  background-repeat: no-repeat;
+  background-size: auto;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-self: center;
+  align-items: stretch;
+  width: 1440px;
+  height: 100%;
+  display: flex;
+}
+
 @media screen and (max-width: 991px) {
   .section {
-    height: 1688px;
+    height: 1366px;
   }
 
   .navbar {
@@ -314,7 +375,7 @@
   }
 
   .section-2 {
-    height: 758px;
+    height: 1148px;
   }
 
   .flex-block {
@@ -349,11 +410,26 @@
   .div-block-5 {
     height: 312px;
   }
+
+  .div-block-6 {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 767px) {
   .section {
-    height: 1808px;
+    height: 1279px;
+  }
+
+  .section-2 {
+    height: 1000px;
+  }
+
+  .heading-2 {
+    padding-left: 28px;
+    padding-right: 28px;
+    font-size: 65px;
+    line-height: 70px;
   }
 
   .div-block-5 {
@@ -364,7 +440,7 @@
 
 @media screen and (max-width: 479px) {
   .section {
-    height: 798px;
+    height: 1046px;
   }
 
   .container-4 {
@@ -390,14 +466,35 @@
   }
 
   .bold-text {
+    clear: none;
+    -webkit-text-fill-color: inherit;
+    object-fit: fill;
+    background-clip: border-box;
+    margin-right: 0;
+    padding-left: 0;
     font-size: 15px;
     line-height: 18px;
     position: static;
   }
 
+  .paragraph-2 {
+    white-space: normal;
+    word-break: normal;
+    overflow-wrap: normal;
+    padding-left: 0;
+  }
+
+  .section-2 {
+    height: 783px;
+  }
+
   .heading-2 {
     font-size: 43px;
     line-height: 50px;
+  }
+
+  .flex-block {
+    width: 100%;
   }
 
   .div-block-4 {
@@ -411,6 +508,10 @@
     align-items: center;
     height: 112px;
     display: flex;
+  }
+
+  .link {
+    font-size: 19px;
   }
 }
 
